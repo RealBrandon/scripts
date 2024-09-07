@@ -1,7 +1,7 @@
 #!/bin/bash
-wget https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
-tar xzvf node_exporter-1.7.0.linux-amd64.tar.gz
-mv node_exporter-1.7.0.linux-amd64 /usr/local/bin/node_exporter
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
+tar xzvf node_exporter-1.8.2.linux-amd64.tar.gz
+mv node_exporter-1.8.2.linux-amd64 /usr/local/bin/node_exporter
 
 groupadd prometheus
 useradd -g prometheus -m -d /var/lib/prometheus -s /sbin/nologin prometheus
@@ -10,7 +10,7 @@ chown prometheus:prometheus -R /usr/local/prometheus
 
 cat > /etc/systemd/system/node_exporter.service << EOF
 [Unit]
-Description=node_exporter-1.7.0
+Description=node_exporter-1.8.2
 Documentation=https://prometheus.io/
 After=network.target
 
